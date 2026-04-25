@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarence Binasbas | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              primary: "#0f172a",
+              accent: "#3b82f6",
+              secondary: "#64748b",
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-out forwards",
+              "slide-up": "slideUp 0.8s ease-out forwards",
+              "bounce-slow": "bounce 3s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans text-slate-800 antialiased bg-white">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 glass-nav transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a href="#home" class="text-2xl font-bold gradient-text font-serif">
+            CB | Portfolio.</a
+          >
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-slate-600 hover:text-slate-900 font-medium transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-slate-600 hover:text-slate-900 font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-slate-600 hover:text-slate-900 font-medium transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-slate-600 hover:text-slate-900 font-medium transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+          >
+            <i data-lucide="menu" class="w-6 h-6 text-slate-600"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full"
+      >
+        <div class="px-4 py-4 space-y-3">
+          <a
+            href="#home"
+            class="block px-4 py-2 rounded-lg hover:bg-slate-50 text-slate-600 font-medium"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-4 py-2 rounded-lg hover:bg-slate-50 text-slate-600 font-medium"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="block px-4 py-2 rounded-lg hover:bg-slate-50 text-slate-600 font-medium"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-4 py-2 rounded-lg hover:bg-slate-50 text-slate-600 font-medium"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home / Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden pt-20"
+    >
+      <div
+        class="blob bg-blue-400 w-96 h-96 rounded-full top-0 right-0 -mr-20 -mt-20"
+      ></div>
+      <div
+        class="blob bg-purple-400 w-80 h-80 rounded-full bottom-0 left-0 -ml-20 -mb-20"
+        style="animation-delay: -5s"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div
+            class="mb-6 inline-block px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-semibold tracking-wide uppercase animate-fade-in"
+          >
+            Welcome to my portfolio
+          </div>
+
+          <h1
+            class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight animate-slide-up"
+          >
+            Hi, I'm
+            <span class="gradient-text font-serif">Clarence Binasbas</span>
+          </h1>
+
+          <div
+            class="text-xl md:text-2xl text-slate-600 mb-8 h-8 animate-slide-up"
+            style="animation-delay: 0.2s"
+          >
+            <span id="typing-text" class="typing-cursor"></span>
+          </div>
+
+          <p
+            class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed animate-slide-up"
+            style="animation-delay: 0.4s"
+          >
+            I craft beautiful digital experiences with modern technologies.
+            Passionate about clean code, intuitive design, and solving
+            real-world problems.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
+            style="animation-delay: 0.6s"
+          >
+            <a
+              href="#projects"
+              class="px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2"
+            >
+              View My Work
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="#contact"
+              class="px-8 py-4 border-2 border-slate-200 text-slate-700 rounded-full font-semibold hover:border-slate-900 hover:text-slate-900 transition-all flex items-center gap-2"
+            >
+              Get In Touch
+            </a>
+          </div>
+
+          <div
+            class="mt-16 flex justify-center gap-6 animate-fade-in"
+            style="animation-delay: 1s"
+          >
+            <a
+              href="#"
+              class="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all hover:-translate-y-1 text-slate-600 hover:text-blue-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-github size-5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all hover:-translate-y-1 text-slate-600 hover:text-blue-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin size-5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="#"
+              class="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all hover:-translate-y-1 text-slate-600 hover:text-blue-600"
+            >
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce-slow"
+      >
+        <a
+          href="#about"
+          class="text-slate-400 hover:text-slate-600 transition-colors"
+        >
+          <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </a>
+      </div> -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <!-- Image/Visual Side -->
+          <div class="scroll-reveal relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div
+                class="aspect-[4/5] bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center"
+              >
+                <div class="text-center p-8">
+                  <div
+                    class="w-80 h-80 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold relative"
+                  >
+                    <img
+                      class="absolute size-full object-cover rounded-full"
+                      alt="profile"
+                      src="./assets/profile.jpg"
+                    />
+                  </div>
+                  <p class="text-slate-500 font-medium">Clarence Binasbas</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute -bottom-6 -right-6 w-48 h-48 bg-blue-100 rounded-full -z-10"
+            ></div>
+            <div
+              class="absolute -top-6 -left-6 w-32 h-32 bg-purple-100 rounded-full -z-10"
+            ></div>
+          </div>
+
+          <!-- Content Side -->
+          <div class="scroll-reveal">
+            <h2
+              class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2"
+            >
+              About Me
+            </h2>
+            <h3 class="text-4xl font-bold text-slate-900 mb-6 font-serif">
+              Frontend Developer
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed mb-6">
+              I’m an aspiring front-end developer with a strong interest in
+              building responsive and user-friendly web interfaces. Although I’m
+              still new to the field and have no professional experience yet,
+              I’ve been actively learning core web technologies such as HTML,
+              CSS, and JavaScript. I enjoy turning ideas into simple, functional
+              designs and I’m currently focused on improving my skills through
+              personal projects and continuous practice.
+            </p>
+
+            <p class="text-slate-600 leading-relaxed mb-8">
+              When I'm not coding, you'll find me exploring new design trends,
+              or enjoying a good cup of coffee while sketching UI ideas.
+            </p>
+
+            <!-- Skills -->
+            <div class="space-y-4 mb-8">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-slate-700"
+                    >Frontend Development</span
+                  >
+                  <span class="text-sm text-slate-500">95%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5">
+                  <div
+                    class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-2.5 rounded-full"
+                    style="width: 0%"
+                    data-width="95%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-slate-700"
+                    >Backend Development</span
+                  >
+                  <span class="text-sm text-slate-500">85%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5">
+                  <div
+                    class="skill-bar bg-gradient-to-r from-purple-500 to-purple-600 h-2.5 rounded-full"
+                    style="width: 0%"
+                    data-width="85%"
+                  ></div>
+                </div>
+              </div> -->
+
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-slate-700"
+                    >UI/UX Design</span
+                  >
+                  <span class="text-sm text-slate-500">90%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5">
+                  <div
+                    class="skill-bar bg-gradient-to-r from-pink-500 to-rose-500 h-2.5 rounded-full"
+                    style="width: 0%"
+                    data-width="90%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <!-- <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >React</span
+              >
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >TypeScript</span
+              >
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >Node.js</span
+              > -->
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >CSS</span
+              >
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >JavaScript</span
+              >
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >Python</span
+              >
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >Tailwind CSS</span
+              >
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >HTML</span
+              >
+              <span
+                class="px-4 py-2 bg-white rounded-full text-sm font-medium text-slate-700 shadow-sm border border-slate-200"
+                >Java</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 scroll-reveal">
+          <h2
+            class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2"
+          >
+            Portfolio
+          </h2>
+          <h3 class="text-4xl font-bold text-slate-900 mb-4 font-serif">
+            Featured Projects
+          </h3>
+          <p class="text-slate-600 max-w-2xl mx-auto">
+            Here are some of my recent works that showcase my skills and passion
+            for development.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-card scroll-reveal group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-lg"
+          >
+            <div
+              class="relative h-64 bg-gradient-to-br from-blue-500 to-blue-600 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 flex items-center justify-center text-white"
+              >
+                <i
+                  data-lucide="clipboard-list"
+                  class="w-16 h-16 opacity-50 group-hover:scale-110 transition-transform duration-500"
+                ></i>
+              </div>
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"
+              ></div>
+              <!-- <div
+                class="absolute top-4 right-4 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-medium"
+              >
+                E-Commerce
+              </div> -->
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-slate-900 mb-2">To do list</h4>
+              <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                A command-line To-Do List application written in Python with
+                type hints for better structure and reliability.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-md font-medium"
+                >
+                  Python</span
+                >
+                <!-- <span
+                  class="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-md font-medium"
+                  >Stripe</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-md font-medium"
+                  >PostgreSQL</span
+                > -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-card scroll-reveal group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-lg"
+            style="transition-delay: 0.1s"
+          >
+            <div
+              class="relative h-64 bg-gradient-to-br from-purple-500 to-pink-500 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 flex items-center justify-center text-white"
+              >
+                <i
+                  data-lucide="calculator"
+                  class="w-16 h-16 opacity-50 group-hover:scale-110 transition-transform duration-500"
+                ></i>
+              </div>
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"
+              ></div>
+              <!-- <div
+                class="absolute top-4 right-4 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-medium"
+              >
+                Analytics
+              </div> -->
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-slate-900 mb-2">Calculator</h4>
+              <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                A simple, user-friendly calculator that performs basic
+                arithmetic operations such as addition, subtraction,
+                multiplication, and division.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-purple-50 text-purple-600 text-xs rounded-md font-medium"
+                  >HTML</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-50 text-purple-600 text-xs rounded-md font-medium"
+                  >CSS</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-50 text-purple-600 text-xs rounded-md font-medium"
+                  >JavaScript</span
+                >
+              </div>
+              <div class="flex gap-3 pt-4 border-t border-slate-100">
+                <a
+                  href="#"
+                  class="flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-purple-600 transition-colors"
+                >
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-purple-600 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-github"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                    />
+                  </svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-card scroll-reveal group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-lg"
+            style="transition-delay: 0.2s"
+          >
+            <div
+              class="relative h-64 bg-gradient-to-br from-emerald-500 to-teal-500 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 flex items-center justify-center text-white"
+              >
+                <i
+                  data-lucide="landmark"
+                  class="w-16 h-16 opacity-50 group-hover:scale-110 transition-transform duration-500"
+                ></i>
+              </div>
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"
+              ></div>
+              <!-- <div
+                class="absolute top-4 right-4 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-medium"
+              >
+                Social
+              </div> -->
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-slate-900 mb-2">
+                Banking System
+              </h4>
+              <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                A secure banking application that allows users to manage
+                accounts, perform deposits and withdrawals, transfer funds, and
+                view transaction history with real-time balance updates.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-emerald-50 text-emerald-600 text-xs rounded-md font-medium"
+                  >Java</span
+                >
+                <!-- <span
+                  class="px-2 py-1 bg-emerald-50 text-emerald-600 text-xs rounded-md font-medium"
+                  >Socket.io</span
+                >
+                <span
+                  class="px-2 py-1 bg-emerald-50 text-emerald-600 text-xs rounded-md font-medium"
+                  >WebRTC</span
+                > -->
+              </div>
+              <div class="flex gap-3 pt-4 border-t border-slate-100">
+                <a
+                  href="#"
+                  class="flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors"
+                >
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-purple-600 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-github"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                    />
+                  </svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 scroll-reveal">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 rounded-full font-semibold text-slate-700 hover:border-slate-900 hover:text-slate-900 transition-all"
+          >
+            View All Projects
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-50 relative overflow-hidden">
+      <div
+        class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid md:grid-cols-2 gap-16">
+          <!-- Contact Info -->
+          <div class="scroll-reveal">
+            <h2
+              class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2"
+            >
+              Get In Touch
+            </h2>
+            <h3 class="text-4xl font-bold text-slate-900 mb-6 font-serif">
+              Let's Work Together
+            </h3>
+            <p class="text-slate-600 mb-8 leading-relaxed">
+              Have a project in mind or want to discuss opportunities? I'm
+              always open to new ideas and collaborations. Feel free to reach
+              out!
+            </p>
+
+            <div class="space-y-6 mb-8">
+              <div class="flex items-start gap-4">
+                <div
+                  class="p-3 bg-white rounded-xl shadow-sm border border-slate-100 text-blue-600"
+                >
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900">Email</h4>
+                  <p class="text-slate-600">markbinasbas01@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="p-3 bg-white rounded-xl shadow-sm border border-slate-100 text-blue-600"
+                >
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900">Location</h4>
+                  <p class="text-slate-600">Bakal 1, Talavera, Nueva Ecija</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="p-3 bg-white rounded-xl shadow-sm border border-slate-100 text-blue-600"
+                >
+                  <i data-lucide="briefcase" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900">Availability</h4>
+                  <p class="text-slate-600">Open to freelance & full-time</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Download Button -->
+            <a
+              href="/assets/resume.pdf"
+              target="_blank"
+              download="/assets/resume.pdf"
+              class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 group"
+            >
+              <i
+                data-lucide="download"
+                class="w-5 h-5 group-hover:animate-bounce"
+              ></i>
+              Download Resume
+            </a>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="scroll-reveal bg-white rounded-2xl p-8 shadow-xl border border-slate-100"
+          >
+            <form id="contact-form" class="space-y-6">
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-2"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-slate-50 focus:bg-white"
+                    placeholder="John"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-2"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-slate-50 focus:bg-white"
+                    placeholder="Doe"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-slate-50 focus:bg-white"
+                  placeholder="john@example.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2"
+                  >Subject</label
+                >
+                <select
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-slate-50 focus:bg-white"
+                >
+                  <option>Project Inquiry</option>
+                  <option>Job Opportunity</option>
+                  <option>Collaboration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-slate-50 focus:bg-white resize-none"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-4 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2 group"
+              >
+                Send Message
+                <i
+                  data-lucide="send"
+                  class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                ></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold text-white font-serif mb-2">
+              CB | Portfolio.
+            </h3>
+            <p class="text-sm text-slate-400">
+              Crafting digital experiences with passion.
+            </p>
+          </div>
+
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                />
+              </svg>
+            </a>
+            <a href="#" class="hover:text-white transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="hover:text-white transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-twitter-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="hover:text-white transition-colors">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500"
+        >
+          <p>2026 Clarence Binasbas. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div
+      id="toast"
+      class="fixed bottom-6 right-6 transform translate-y-20 opacity-0 transition-all duration-300 z-50"
+    >
+      <div
+        class="bg-slate-900 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3"
+      >
+        <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+        <span id="toast-message">Message sent successfully!</span>
+      </div>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>

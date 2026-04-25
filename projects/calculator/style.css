@@ -1,0 +1,151 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #333;
+  border-radius: 10px;
+}
+
+#display {
+  border: 1px solid black;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 5px;
+  height: 50px;
+  font-size: 2rem;
+  text-align: right;
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+#display::-webkit-scrollbar {
+  display: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding: 5px;
+  height: 300px;
+  gap: 5px;
+}
+
+button {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.clear {
+  grid-column: span 2;
+  width: 100%;
+  order: 1;
+  background-color: #f44336;
+}
+
+.parenthesis {
+  order: 2;
+  background: #444;
+}
+
+.number {
+  background: #444;
+}
+
+.operator {
+  background: #ff6f61;
+}
+#add {
+  order: 3;
+}
+
+#b1 {
+  order: 4;
+}
+
+#b2 {
+  order: 5;
+}
+
+#b3 {
+  order: 6;
+}
+
+#sub {
+  order: 7;
+}
+
+#b4 {
+  order: 8;
+}
+
+#b5 {
+  order: 9;
+}
+
+#b6 {
+  order: 10;
+}
+
+#mul {
+  order: 11;
+}
+
+#b7 {
+  order: 12;
+}
+
+#b8 {
+  order: 13;
+}
+
+#b9 {
+  order: 14;
+}
+
+#div {
+  order: 15;
+}
+
+#b0 {
+  order: 16;
+}
+
+.dot {
+  order: 17;
+  background: #444;
+}
+
+.delete {
+  background: #444;
+  order: 18;
+}
+
+.equals {
+  order: 19;
+  grid-column: span 2;
+  background: #4caf50;
+}
